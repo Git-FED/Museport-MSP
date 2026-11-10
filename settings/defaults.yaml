@@ -1,0 +1,21 @@
+# Illustrative safe defaults for a new site; requires an implementation to have effect.
+site:
+  visibility: private
+  password_protected: false
+  custom_domain: null
+uploads:
+  enabled: false
+  maximum_file_bytes: 0
+forms:
+  enabled: false
+analytics:
+  enabled: false
+secrets:
+  store_values: false
+  redact_logs: true
+changes:
+  dry_run_first: true
+  require_confirmation_for_destructive_actions: true
+backups:
+  enabled: true
+  require_restore_test: true

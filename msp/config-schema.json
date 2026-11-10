@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/msp/config-schema.json",
+  "title": "Illustrative MSP Hosting Settings",
+  "description": "Proposal only. Replace example.invalid and review before implementation.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {"type": "string", "const": "0.1.0-proposal"},
+    "site": {"type": "object", "additionalProperties": false, "properties": {"visibility": {"enum": ["public", "private"]}, "customDomain": {"type": ["string", "null"]}, "custom404": {"type": ["string", "null"]}}, "required": ["visibility"]},
+    "uploads": {"type": "object", "additionalProperties": false, "properties": {"enabled": {"type": "boolean"}, "maxFileBytes": {"type": "integer", "minimum": 0}, "allowedMimeTypes": {"type": "array", "items": {"type": "string"}}}},
+    "routing": {"type": "object", "additionalProperties": false, "properties": {"redirects": {"type": "array", "items": {"type": "object", "additionalProperties": false, "properties": {"from": {"type": "string"}, "to": {"type": "string"}, "status": {"enum": [301, 302, 307, 308]}}, "required": ["from", "to", "status"]}}}},
+    "cache": {"type": "object", "additionalProperties": false, "properties": {"control": {"type": "string"}}}
+  },
+  "required": ["schemaVersion", "site"]
+}

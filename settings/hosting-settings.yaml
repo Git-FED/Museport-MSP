@@ -1,0 +1,17 @@
+# Muse Hosting settings proposal. Not an active configuration file.
+settings:
+  custom_domain: { enabled: false, hostname: null }
+  ssl: { enabled: true, mode: managed, status: not_configured }
+  visibility: { mode: public, password_protected: false }
+  direct_uploads: { enabled: false, max_file_bytes: 0, allowed_types: [] }
+  storage_meter: { enabled: true, updated_at: null }
+  file_manager: { enabled: true, delete_confirmation: true }
+  redirects_routes: { enabled: true, rules: [] }
+  custom_404: { path: /404.html }
+  forms: { enabled: false, retention_days: null }
+  visitor_stats: { enabled: false, privacy_mode: privacy_first }
+  scheduled_runs: { enabled: false, jobs: [] }
+  secrets: { enabled: false, values: never_commit_secrets }
+  versions_rollback: { enabled: true, retention: provider_defined }
+  dns_settings: { enabled: false, records: [] }
+  cache_control: { enabled: true, policy: conservative }
